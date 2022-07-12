@@ -45,7 +45,6 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func ss(_ sender: UIButton) {
-        print(sender.tag, sender.currentImage)
         for i in 0...8 {
             if sender.tag == i {
                 arr[i] += 1
