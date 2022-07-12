@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631CDC98287CFE2B001F2453 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631CDC97287CFE2B001F2453 /* FirstViewController.swift */; };
+		631CDC9A287D2121001F2453 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631CDC99287D2121001F2453 /* SecondViewController.swift */; };
 		633C5D0F287C0B6E00CE6782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C5D0E287C0B6E00CE6782 /* AppDelegate.swift */; };
 		633C5D11287C0B6E00CE6782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C5D10287C0B6E00CE6782 /* SceneDelegate.swift */; };
 		633C5D13287C0B6E00CE6782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633C5D12287C0B6E00CE6782 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		631CDC97287CFE2B001F2453 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		631CDC99287D2121001F2453 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		633C5D0B287C0B6E00CE6782 /* emotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633C5D0E287C0B6E00CE6782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		633C5D10287C0B6E00CE6782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				633C5D0E287C0B6E00CE6782 /* AppDelegate.swift */,
 				633C5D10287C0B6E00CE6782 /* SceneDelegate.swift */,
 				633C5D12287C0B6E00CE6782 /* ViewController.swift */,
+				631CDC97287CFE2B001F2453 /* FirstViewController.swift */,
+				631CDC99287D2121001F2453 /* SecondViewController.swift */,
 				633C5D14287C0B6E00CE6782 /* Main.storyboard */,
 				633C5D17287C0B6E00CE6782 /* Assets.xcassets */,
 				633C5D19287C0B6E00CE6782 /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 				633C5D13287C0B6E00CE6782 /* ViewController.swift in Sources */,
 				633C5D0F287C0B6E00CE6782 /* AppDelegate.swift in Sources */,
 				633C5D11287C0B6E00CE6782 /* SceneDelegate.swift in Sources */,
+				631CDC9A287D2121001F2453 /* SecondViewController.swift in Sources */,
+				631CDC98287CFE2B001F2453 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
