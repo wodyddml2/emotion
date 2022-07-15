@@ -45,7 +45,17 @@ class ViewController: UIViewController {
         // return이 함수 내에 오직 한 번만 사용되고 한 줄에 대한 코드 만 있을 경우 생략
         "\(a) \(count[i])"
     }
-
+    
+    
+    
+    // Reset 버튼
+    @IBAction func countReset(_ sender: UIBarButtonItem) {
+        for i in 0...count.count - 1 {
+            count[i] = 0
+            emotionLabel[i].text = "\(emotionName[i]) \(count[i])"
+        }
+    }
+    
     @IBAction func emotionButton(_ sender: UIButton) {
         for i in 0...count.count-1{
             if sender.tag == i{
@@ -53,6 +63,7 @@ class ViewController: UIViewController {
                 emotionLabel[i].text = "\(emotionName[i]) \(count[i])"
             }
         }
+        
         
         
         // Switch문: 조건이 많을 경우 효율적으로 대응

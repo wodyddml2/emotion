@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -232,15 +233,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-bM-DjD">
-                                <rect key="frame" x="288" y="146" width="85" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="연습창으로"/>
-                                <connections>
-                                    <segue destination="qSN-WL-LHo" kind="show" id="n0w-xu-s6S"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -264,6 +256,32 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="list.bullet" catalog="system" id="x2G-Li-ea5">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="8D5-6q-z65">
+                                <imageReference key="image" image="paperplane.fill" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <connections>
+                                    <segue destination="qSN-WL-LHo" kind="show" id="zKd-cR-gRL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="vdr-vV-3fh">
+                                <imageReference key="image" image="gobackward" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color systemColor="labelColor"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <connections>
+                                    <action selector="countReset:" destination="BYZ-38-t0r" id="x9I-Lk-oe5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outletCollection property="emotionLabel" destination="UWI-J7-sHy" collectionClass="NSMutableArray" id="8Z0-nt-Fj0"/>
@@ -586,7 +604,9 @@
     </scenes>
     <resources>
         <image name="back" width="457" height="640"/>
+        <image name="gobackward" catalog="system" width="121" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="sesac_slime1" width="278" height="258"/>
         <image name="sesac_slime2" width="278" height="258"/>
         <image name="sesac_slime3" width="278" height="258"/>
@@ -596,11 +616,20 @@
         <image name="sesac_slime7" width="278" height="258"/>
         <image name="sesac_slime8" width="278" height="258"/>
         <image name="sesac_slime9" width="278" height="258"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
