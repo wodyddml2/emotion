@@ -25,44 +25,46 @@ class ViewController: UIViewController {
   
     @IBOutlet var emotionLabel: [UILabel]!
     
-    var count = Array(repeating: 0, count: 9)
+    var emotionCount = Array(repeating: 0, count: 9)
     var emotionName = ["행복해","사랑해","좋아해","당황해","속상해","우울해","심심해","삐딱해","쓸쓸해"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 0...count.count-1 {
-// 매개 변수 없을 시
-// emotionText(a: emotionName[i], i: i)
-            emotionLabel[i].text = emotionText(a: emotionName[i], i: i)
+        for i in 0...emotionCount.count-1 {
+// 반환 값 없을 시
+// emotionText(emotionName[i], i)
+            emotionLabel[i].text = emotionText(emotionName[i], i)
         }
 
  
     }
-    func emotionText(a: String, i: Int) -> String {
-// 매개 변수 없을 시
-// emotionLabel[i].text = "\(a) \(count[i])"
+    func emotionText(_ name: String, _ number: Int) -> String {
+// 반환 값 없을 시
+// emotionLabel[i].text = "\(name) \(emotionCount[number])"
 
         // return이 함수 내에 오직 한 번만 사용되고 한 줄에 대한 코드 만 있을 경우 생략
-        "\(a) \(count[i])"
+        "\(name) \(emotionCount[number])"
     }
     
     
     
     // Reset 버튼
     @IBAction func countReset(_ sender: UIBarButtonItem) {
-        for i in 0...count.count - 1 {
-            count[i] = 0
-            emotionLabel[i].text = "\(emotionName[i]) \(count[i])"
+        for i in 0...emotionCount.count - 1 {
+            emotionCount[i] = 0
+            emotionLabel[i].text = "\(emotionName[i]) \(emotionCount[i])"
         }
     }
     
     @IBAction func emotionButton(_ sender: UIButton) {
-        for i in 0...count.count-1{
-            if sender.tag == i{
-                count[i] += 1
-                emotionLabel[i].text = "\(emotionName[i]) \(count[i])"
-            }
-        }
+//        for i in 0...emotionCount.count-1{
+//            if sender.tag == i{
+//                emotionCount[i] += 1
+//                emotionLabel[i].text = "\(emotionName[i]) \(emotionCount[i])"
+//            }
+//        }
+        emotionCount[sender.tag] += 1
+        emotionLabel[sender.tag].text = "\(emotionName[sender.tag]) \(emotionCount[sender.tag])"
         
         
         
